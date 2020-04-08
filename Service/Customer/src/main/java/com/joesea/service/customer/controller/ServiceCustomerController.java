@@ -19,6 +19,6 @@ public class ServiceCustomerController {
 
     @RequestMapping(value = "test")
     public Object test() {
-        return restTemplate.getForObject("http://service-provider/serviceProvider/getJsonResult", Object.class);
+        return restTemplate.getForObject("http://provider/serviceProvider/getJsonResult", Object.class);
     }
 }

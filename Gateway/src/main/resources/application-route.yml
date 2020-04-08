@@ -7,8 +7,14 @@ spring:
         - StripPrefix=1
       routes:
         # =====================================
-        # 权限服务路由规则
-        - id: authority_route
-          uri: lb://service-provider
+        # 服务提供者服务路由规则
+        - id: provider_route
+          uri: lb://provider
           predicates:
             - Path=/provider/**
+        # =====================================
+        # 服务提供者服务路由规则
+        - id: customer_route
+          uri: lb://customer
+          predicates:
+            - Path=/customer/**
