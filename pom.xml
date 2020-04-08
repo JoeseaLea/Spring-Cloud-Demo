@@ -5,10 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>Eureka</module>
-        <module>Service Provider</module>
-        <module>Service Customer</module>
-        <module>Common</module>
         <module>Service</module>
+        <module>Gateway</module>
+        <module>Common</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

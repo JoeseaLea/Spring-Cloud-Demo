@@ -1,0 +1,14 @@
+spring:
+  jmx:
+    enabled: false
+  cloud:
+    gateway:
+      default-filters:
+        - StripPrefix=1
+      routes:
+        # =====================================
+        # 权限服务路由规则
+        - id: authority_route
+          uri: lb://service-provider
+          predicates:
+            - Path=/provider/**
